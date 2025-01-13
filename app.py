@@ -56,4 +56,4 @@ if __name__ == "__main__":
         db.create_all()
         create_admin()
 
-    app.run(debug=True)
+app.run(debug=True, ssl_context=('certs/127.0.0.1.pem', 'certs/127.0.0.1-key.pem'))
