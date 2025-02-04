@@ -33,7 +33,7 @@ def load_user(user_id):
 
 @login_manager.unauthorized_handler
 def unauthorized_callback():
-    return redirect(url_for("home"))
+    return redirect(url_for("index.home"))
 
 
 models_dir = os.path.join(os.path.dirname(__file__), "models")

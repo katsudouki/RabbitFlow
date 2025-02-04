@@ -14,7 +14,6 @@ from app import db, csrf
 
 bp = Blueprint("dashboard", __name__)
 
-
 @bp.route("/dashboard")
 @login_required
 def dashboard():

@@ -14,10 +14,7 @@
 }
     </style>
     <div class="fixed top-4 right-4 flex items-center space-x-2 z-10">
-        <!-- PT Label -->
-        <span class="customtext">PT</span>
-    
-        <!-- Toggle -->
+         <span class="customtext">PT</span>
         <div class="relative inline-block w-10 align-middle select-none">
             <form id="language-toggle-form" action="{{ url_for('index.set_language', language='en' if session.get('lang') == 'pt' else 'pt') }}" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
@@ -27,8 +24,6 @@
                 </label>
             </form>
         </div>
-        
-        <!-- EN Label -->
         <span class="customtext">EN</span>
     </div>
     
@@ -40,7 +35,8 @@
             <h2 class="text-2xl font-bold customtext">RabbitFlow</h2>
         </div>
         
-        <form id="loginForm" method="POST" action="{{ url_for('auth.auth') }}">
+        <form id="loginForm" method="POST" >
+     
             <div class="mb-4 text-left">
                 <label for="username" id="username-label" class="block text-sm font-medium ">{{ _('Username') }}</label>
                 <input type="text" name="username" id="username" required class="mt-1 block w-full text-center customtext rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-lg min-h-8 sm:text-sm">
