@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<title>{% block title %}Expense{% endblock %}</title>
+<body class="items-center justify-center min-h-screen custombg">
+    <table class="table-auto table-dark border-2 rounded-sm center">
+        <th>
+            <td>{{ _('Value') }}</td><td>{{ _('Category') }}</td><td>{{ _('Date') }}</td><td>{{ _('Description') }}</td> 
+        </th>
+    </table>
+</body>
+{% endblock %}

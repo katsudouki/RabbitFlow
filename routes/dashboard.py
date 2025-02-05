@@ -18,3 +18,33 @@ bp = Blueprint("dashboard", __name__)
 @login_required
 def dashboard():
     return render_template("dashboard.html")
+
+@bp.route("/dash")
+@login_required
+def dash():
+    return render_template("dash.html")
+
+@bp.route("/transactions")
+@login_required
+def transactions():
+    return render_template("transactions.html")
+
+@bp.route("/income")
+@login_required
+def income():
+    return render_template("income.html")
+
+@bp.route("/expense")
+@login_required
+def expense():
+    return render_template("expense.html")
+
+@bp.route("/profile")
+@login_required
+def profile():
+    return render_template("profile.html")
+
+@bp.route("/settings")
+@login_required
+def settings():
+    return render_template("settings.html")

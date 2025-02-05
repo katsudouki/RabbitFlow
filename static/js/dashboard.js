@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  carregarPagina("dash");
   $(".logoutbutton").click(function () {
     window.location.href = "logout";
   });
