@@ -41,7 +41,7 @@ def set_language(language):
     }
     return jsonify(translations)
 
-# FIX: depois editar para que as cores sejam pegas da database
+# INFO: depois editar para que as cores sejam pegas da database
 # NOTE: adicionar comparacao
 @bp.route('/static/css/custom-colors.css')
 def customcss():

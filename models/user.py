@@ -1,7 +1,7 @@
-from extensions import db  # Importe de extensions.py
+from extensions import db 
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import models
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -19,3 +19,6 @@ def create_admin():
         print("Admin user created.")
     else:
         print("Admin user already exists.")
+from app import app  
+with app.app_context():
+    create_admin()

@@ -24,10 +24,10 @@ def auth():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
             login_user(user)
-            response = {"success": True}  # Corrigido aqui
+            response = {"success": True} 
             return make_response(jsonify(response), 200)
         else:
-            response = {"success": False}  # Corrigido aqui
+            response = {"success": False}
             return make_response(jsonify(response), 200)
     return render_template("index.html")
 
