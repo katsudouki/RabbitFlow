@@ -21,4 +21,5 @@ def create_admin():
         print("Admin user already exists.")
 from app import app  
 with app.app_context():
+    db.create_all()
     create_admin()
